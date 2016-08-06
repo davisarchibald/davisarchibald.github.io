@@ -13,10 +13,9 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
-  text-align: center;
+  background-color: #F1F3F2;
+  font: 18px Helvetica, Arial, sans-serif;
+  color:#333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,133 +27,123 @@ p { margin: 1em 0; }
 a         { color: #00a; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
 
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
-.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
+section {
+    font-size: 36px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 0 32px 50px;
 }
 
-.posts li {
-  line-height: 1.75em;
+nav {
+    background: #40525C;
+    position: fixed;
+    width:100%;
+    top:0;
+}
+.menu {
+    cursor: pointer;
+    color: #FFF;
+    padding: 20px 10px;
+    display: none;
+}
+.nav-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.nav-list li {
+    padding: 20px 10px;
+    list-style: none;
+}
+.nav-list li a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
 }
 
-.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+.intro {
+    margin-top: 100px;
+}
+.intro-image {
+    border-radius: 50%;
+    border: 16px solid #F1514C;
+    box-shadow: 2px 1px 1px 1px #666;
+    max-width: 200px;
+    max-height: 200px;
+}
+.intro-text {
+    flex: 1 0;
+    margin: auto 30px;
 }
 
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
+.experience-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding: 16px;
 }
 
-.header a {
-  font-weight: bold;
-  text-decoration: none;
+#experience h2  {
+    flex: 1 0 100%;
+}
+.experience-list li {
+    flex: 1 0 100%;
+    list-style: none;
+    padding-left: 16px;
+    font-size: 85%;
+}
+.experience-list li h3 {
+    font-size: 100%;
+}
+.experience-list .experience-dates {
+    padding: 0;
+    margin: 0;
+    color:#A6A6A4;
+    font-size: 85%;
 }
 
-.title {
-  display: inline-block;
-  margin-bottom: 2em;
+@media all and (max-width: 800px) {
+  .nav-list {
+    justify-content: space-around;
+  }
+  .intro-image {
+      max-width: 100px;
+      max-height: 100px;
+      border: 8px solid #F1514C;
+  }
+  section {
+      font-size: 24px;
+  }
 }
 
-.title a {
-  color: #a00;
+.contact p {
+    flex: 1 0 100%;
 }
 
-.title a:hover {
-  color: #000;
-}
-
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.header a.extra:hover {
-  color: #000;
-}
-
-.meta {
-  color: #aaa;
-}
-
-.footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
-}
-
-.footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-
-.footer .contact a {
-  color: #8085C1;
-}
-
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.footer .rss img {
-  border: 0;
-}
-
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-
-/* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
-}
-
-.post ul, .post ol {
-  margin-left: 1.35em;
-}
-
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
-}
-
-.post pre code {
-  border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
-
-.post pre.terminal code {
-  background-color: #333;
+@media all and (max-width: 600px) {
+  .menu {
+      display: block;
+  }
+  .nav-list {
+    flex-direction: column;
+    display: none;
+  }
+  .menu.open + .nav-list {
+      display: flex;
+  }
+  .intro-image {
+      margin: 0 auto;
+  }
+  .intro-text {
+      margin: 15px 0 0;
+      flex: 1 0 100%;
+  }
+  section {
+      font-size: 18px;
+      padding: 0 16px 25px;
+  }
 }

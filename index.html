@@ -1,13 +1,74 @@
----
-layout: default
-title: Your New Jekyll Site
----
-
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Davis Archibald | Senior Front End Developer</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <nav>
+        <div class="menu">&#9776; Menu</div>
+        <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <!--<li><a href="#work">Work</a></li>-->
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="intro" id="about">
+        <img src="./images/profile.jpg" alt="" class="intro-image">
+        <p class="intro-text">
+            Hi. My name is Davis Archibald and I’m a Senior Front-End Developer currently based in Salt Lake City, UT. I have a passion for HTML, CSS, and JavaScript. I love working in the field and have been doing so professionally  for over 5 years.
+        </p>
+        <p>
+            Besides coding,  I love riding my road bike, taking pictures (especially Black and White film), and traveling with my wife and dog.
+        </p>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul class="experience-list">
+            <li>
+                <header>
+                    <h3>Senior Front End Developer at Overstock.com</h3>
+                    <p class="experience-dates">
+                        2013-Present
+                    </p>
+                    <p>I’ve worked on a variety of projects in my time with Overstock.com. Most recently I’ve been working on internal single-page applications, used throughout the company, utilizing modern JS technology/frameworks like React.js, Angular.js, ES6+, and Node.js.</p>
+                </header>
+                <p class="experience-list-description"></p>
+            </li>
+            <li>
+                <header>
+                    <h3>Front End Developer at Ancestry.com</h3>
+                    <p class="experience-dates">
+                        2011-2013
+                    </p>
+                    <p>At Ancestry.com, I initially worked on email and marketing campaigns. Later I was the Front-End Developer on our CMS team, and during the last year at the company  I worked on the Testing and Conversion team implementing A/B tests throughout the site.
+</p>
+                </header>
+                <p class="experience-list-description"></p>
+            </li>
+            <li>
+                <header>
+                    <h3>Freelance Front End Developer</h3>
+                    <p class="experience-dates">
+                        2009-Present
+                    </p>
+                </header>
+                <p class="experience-list-description"></p>
+            </li>
+        </ul>
+    </section>
+    <!--<section id="work">
+        <h2>Work</h2>
+    </section>-->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>
+            Interested in chatting? You can contact me via email at <a href="mailto:davis@davisarchibald.com">davis@davisarchibald.com</a> or hit me up on <a href="https://www.linkedin.com/in/davis-archibald-04580871">LinkedIn</a>.
+        </p>
+    </section>
+    <script src="./js/main.js"></script>
+</body>
+</html>

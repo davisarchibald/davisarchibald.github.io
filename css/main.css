@@ -35,7 +35,7 @@ section {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    padding: 0 16px 50px;
+    padding: 0 32px 50px;
 }
 
 nav {
@@ -80,6 +80,32 @@ nav {
     margin: auto 30px;
 }
 
+.experience-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+#experience h2  {
+    flex: 1 0 100%;
+}
+.experience-list li {
+    flex: 1 0 100%;
+    list-style: none;
+    padding-left: 16px;
+    font-size: 85%;
+}
+.experience-list li h3 {
+    font-size: 100%;
+}
+.experience-list .experience-dates {
+    padding: 0;
+    margin: 0;
+    opacity: 0.75;
+    font-size: 85%;
+}
+
 @media all and (max-width: 800px) {
   .nav-list {
     justify-content: space-around;
@@ -92,6 +118,10 @@ nav {
   section {
       font-size: 24px;
   }
+}
+
+.contact p {
+    flex: 1 0 100%;
 }
 
 @media all and (max-width: 600px) {
@@ -114,5 +144,6 @@ nav {
   }
   section {
       font-size: 18px;
+      padding: 0 16px 25px;
   }
 }
